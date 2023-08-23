@@ -1,0 +1,15 @@
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\bin\Debug\net6.0\PizzariaProject.exe
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\bin\Debug\net6.0\PizzariaProject.deps.json
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\bin\Debug\net6.0\PizzariaProject.runtimeconfig.json
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\bin\Debug\net6.0\PizzariaProject.dll
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\bin\Debug\net6.0\PizzariaProject.pdb
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.csproj.AssemblyReference.cache
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.AssemblyInfoInputs.cache
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.AssemblyInfo.cs
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.csproj.CoreCompileInputs.cache
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.dll
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\refint\PizzariaProject.dll
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.pdb
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\PizzariaProject.genruntimeconfig.cache
+C:\Users\silva_gomes01\Documents\Csharp-Projects\PizzariaProject\obj\Debug\net6.0\ref\PizzariaProject.dll
