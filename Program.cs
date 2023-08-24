@@ -1,19 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.Collections.Generic;
 using PizzariaProject.Models;
 
-static void Menu() {
+List<Pizza> pizzaList = new List<Pizza>();
+Console.WriteLine("Bem Vindo ao projeto de Pizzaria!");
+var menuSet = 0;
+do {
     Console.WriteLine("ESCOLHA UMA OPÇÃO:");
     Console.WriteLine("1 - Adicionar Pizza");
-    Console.WriteLine("2 - Listar Pizzas");
+    Console.WriteLine("2 - Listar Pizzas\n");
     Console.WriteLine("Digite sua opção:");
-    var menuSet = int.Parse(Console.ReadLine());
-    
-    switch (menuSet)
-{
-    case 1:
-        var pizza = new Pizza();
+    menuSet = int.Parse(Console.ReadLine());
 
-        Console.WriteLine("Adicionar Pizza");
+    if(menuSet == 1) {
+        var pizza = new Pizza();
+        Console.WriteLine("Adicionar uma Pizza!");
         Console.WriteLine("Digite o nome da Pizza:");
         pizza.Nome = Console.ReadLine();
         Console.WriteLine("Digite os sabores da Pizza separados por vírgula:");
@@ -22,18 +22,26 @@ static void Menu() {
         pizza.Preco = double.Parse(Console.ReadLine());
 
         if(!string.IsNullOrWhiteSpace(pizza.Nome) && !string.IsNullOrWhiteSpace(pizza.Sabor) && pizza.Preco != null){
-            Console.WriteLine("PIZZA CRIADA COM SUCESSO");
-            Menu();
+            pizzaList.Add(pizza);
+            Console.WriteLine("PIZZA CRIADA COM SUCESSO\n");
         } 
         else {
-            Console.WriteLine("Preencha todos os campos!");
-            Menu();
+            Console.WriteLine("Preencha todos os campos!\n");
         }
-        break;
-    case 2:
-        Console.WriteLine("Listar Pizzas");
-        break;
+    } else if (menuSet == 2) {
+        if(pizzaList.Count > 0) {
+            Console.WriteLine("Listar as Pizzas!");
+            foreach (var pizza in pizzaList) {
+                Console.WriteLine("NOME: " + pizza.Nome);
+                Console.WriteLine("SABORES: "+ pizza.Sabor);
+                Console.WriteLine("PREÇO: " + string.Format("R${0:F2}", pizza.Preco) + '\n');
+            }
+            break;
+        } else {
+            Console.WriteLine("Nenhuma Pizza foi cadastrada.");
+            break;
+        }
+    } else {
+        Console.WriteLine("Está opção não existe...\n");
     }
-}
-Console.WriteLine("Bem vindo a Projeto de Pizzaria");
-Menu();
+} while (menuSet != 1 || menuSet != 2);
