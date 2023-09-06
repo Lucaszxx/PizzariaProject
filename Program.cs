@@ -66,8 +66,8 @@ do
         else
         {
             var pedido = new Pedido();
-            pedido.criarPedido(pizzaList);
-            pedidosList.Add(pedido);
+            var pedidoPronto = pedido.criarPedido(pizzaList);
+            pedidosList.Add(pedidoPronto);
         }
     }
 
@@ -80,15 +80,18 @@ do
         }
         else 
         {
-            Console.WriteLine("Listar Pedidos!");
-            foreach (var pedido in pedidosList)
+            Console.WriteLine("\nListar Pedidos!");
+            foreach (Pedido pedido in pedidosList)
             {
-                Console.WriteLine($"{pedido.NomeCliente} - {pedido.TelefoneCliente}");
+                Console.WriteLine($"Cliente: {pedido.NomeCliente} - {pedido.TelefoneCliente}");
                 Console.WriteLine("Pizzas do pedido:");
-                foreach(var pizza in pedido.pizzasPedido) {
-                    Console.WriteLine(pizza.Nome);
+                foreach (Pizza pizza in pedido.pizzasPedido)
+                {
+                    Console.WriteLine($"{pizza.Nome.ToUpper()} - R${pizza.Preco:F2}");
                 }
+                Console.WriteLine($"Total do Pedido: {pedido.ValorTotal:F2}");
             }
+            break;
         }
     }
 

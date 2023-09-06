@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c2SqVk1zXa2HqgVi/Rf+PvQgFsIgT51nsBNVj/+KuTvnoWRjJcmaK26o0QxtECHEsOyk08uf9O6b+3nZVWsVkA==",
+  "dgSpecHash": "5s3X+z3NcGUAEtA7Y1uL4PEYXAoH6wyy085JJzYM3HMDBmxcvqBaOSp7sKqlHC9yelS2eLclWgCYbEBtucX2sA==",
   "success": true,
-  "projectFilePath": "C:\\Projetos\\faculdade\\csharp\\PizzariaProject\\PizzariaProject.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.20\\microsoft.aspnetcore.app.ref.6.0.20.nupkg.sha512",
-    "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.20\\microsoft.netcore.app.host.win-x64.6.0.20.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\PizzariaProject\\PizzariaProject.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
