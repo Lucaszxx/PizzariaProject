@@ -3,7 +3,10 @@ using PizzariaProject.Models;
 
 List<Pizza> pizzaList = new List<Pizza>();
 List<Pedido> pedidosList = new List<Pedido>();
+
+Console.WriteLine("=============================================");
 Console.WriteLine("Bem Vindo ao projeto de Pizzaria!");
+Console.WriteLine("=============================================");
 var menuSet = 0;
 do
 {
@@ -18,18 +21,20 @@ do
     if (menuSet == 1)
     {
         var pizza = new Pizza();
-        Console.WriteLine("Adicionar uma Pizza!");
-        Console.WriteLine("Digite o nome da Pizza:");
+        Console.WriteLine("============= ➕ Adicionar uma Pizza! =============");
+        Console.WriteLine("🍕 Digite o nome da Pizza:");
         pizza.Nome = Console.ReadLine();
-        Console.WriteLine("Digite os sabores da Pizza separados por vírgula:");
+        Console.WriteLine("========================================================");
+        Console.WriteLine("🧾 Digite os sabores da Pizza separados por vírgula:");
         pizza.Sabor = Console.ReadLine();
-        Console.WriteLine("Digite o preço da Pizza (formato 00,00):");
+        Console.WriteLine("=================================================");
+        Console.WriteLine("💵 Digite o preço da Pizza (formato 00,00):");
         pizza.Preco = double.Parse(Console.ReadLine());
 
         if (!string.IsNullOrWhiteSpace(pizza.Nome) && !string.IsNullOrWhiteSpace(pizza.Sabor) && pizza.Preco != null)
         {
             pizzaList.Add(pizza);
-            Console.WriteLine("PIZZA CRIADA COM SUCESSO\n");
+            Console.WriteLine("============ ✅ PIZZA CRIADA COM SUCESSO ==============\n");
         }
         else
         {
@@ -60,8 +65,7 @@ do
     {
         if (pizzaList.Count < 1)
         {
-            Console.WriteLine("Nenhuma Pizza foi cadastrada.");
-            break;
+            Console.WriteLine("❌ Nenhuma Pizza foi cadastrada.");
         }
         else
         {
@@ -75,23 +79,23 @@ do
     {
         if (pedidosList.Count < 1)
         {
-            Console.WriteLine("Nenhum pedido foi encontrado."); 
+            Console.WriteLine("❌ Nenhum pedido foi encontrado."); 
             break;
         }
         else 
         {
-            Console.WriteLine("\nListar Pedidos!");
+            Console.WriteLine("\n ========== Listar Pedidos! ==========");
             foreach (Pedido pedido in pedidosList)
             {
-                Console.WriteLine($"Cliente: {pedido.NomeCliente} - {pedido.TelefoneCliente}");
-                Console.WriteLine("Pizzas do pedido:");
+                Console.WriteLine($"🙋 Cliente: {pedido.NomeCliente} - 📞 {pedido.TelefoneCliente}");
+                Console.WriteLine("========== 📦 Pizzas do pedido ==========");
                 foreach (Pizza pizza in pedido.pizzasPedido)
                 {
-                    Console.WriteLine($"{pizza.Nome.ToUpper()} - R${pizza.Preco:F2}");
+                    Console.WriteLine($"🍕 {pizza.Nome.ToUpper()} - R${pizza.Preco:F2}");
                 }
-                Console.WriteLine($"Total do Pedido: {pedido.ValorTotal:F2}");
+                Console.WriteLine("========================= VALOR TOTAL ==============================");
+                Console.WriteLine($"💵 R${pedido.ValorTotal:F2}\n====================================================================\n");
             }
-            break;
         }
     }
 

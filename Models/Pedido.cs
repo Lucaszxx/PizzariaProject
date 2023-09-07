@@ -29,7 +29,7 @@ public class Pedido
             var pizzaSelecionada = pizzas.Find(pizza => pizza.Nome.ToUpper() == pizzaEscolhida);
             pedido.pizzasPedido.Add(pizzaSelecionada);
             pedido.ValorTotal = pedido.ValorTotal + pizzaSelecionada.Preco;
-            Console.WriteLine("Deseja adicionar mais ma pizza? (1 - SIM | 2 - NÃO)");
+            Console.WriteLine("Deseja adicionar mais uma pizza? (1 - SIM | 2 - NÃO)");
             adicionarPizza = int.Parse(Console.ReadLine());
         } while (adicionarPizza != 2);
 
