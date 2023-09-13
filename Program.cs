@@ -11,7 +11,8 @@ do
     Console.WriteLine("1 - Adicionar Pizza");
     Console.WriteLine("2 - Listar Pizzas");
     Console.WriteLine("3 - Criar novo pedido");
-    Console.WriteLine("4 - Listar Pedidos\n");
+    Console.WriteLine("4 - Listar Pedidos");
+    Console.WriteLine("5 - Pagar pedido\n");
     Console.WriteLine("Digite sua opção:");
     menuSet = int.Parse(Console.ReadLine());
 
@@ -66,6 +67,7 @@ do
         else
         {
             var pedido = new Pedido();
+            pedido.Id = numeroPedidos + 1;
             var pedidoPronto = pedido.criarPedido(pizzaList);
             pedidosList.Add(pedidoPronto);
         }
@@ -83,13 +85,16 @@ do
             Console.WriteLine("\nListar Pedidos!");
             foreach (Pedido pedido in pedidosList)
             {
+                Console.WriteLine($"PEDIDO {pedido.Id}");
                 Console.WriteLine($"Cliente: {pedido.NomeCliente} - {pedido.TelefoneCliente}");
                 Console.WriteLine("Pizzas do pedido:");
                 foreach (Pizza pizza in pedido.pizzasPedido)
                 {
                     Console.WriteLine($"{pizza.Nome.ToUpper()} - R${pizza.Preco:F2}");
                 }
-                Console.WriteLine($"Total do Pedido: {pedido.ValorTotal:F2}");
+                Console.WriteLine($"Total: {pedido.ValorTotal:F2}");
+                Console.WriteLine($"Quanto falta para Pagar: R${pedido.Restante:F2}");
+                Console.WriteLine($"Pago: {pedido.StatusPago}");
             }
             break;
         }
