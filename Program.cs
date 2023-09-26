@@ -3,6 +3,7 @@ using PizzariaProject.Models;
 
 List<Pizza> pizzaList = new List<Pizza>();
 List<Pedido> pedidosList = new List<Pedido>();
+var numeroPedidos = 1;
 
 Console.WriteLine("=============================================");
 Console.WriteLine("Bem Vindo ao projeto de Pizzaria!");
@@ -53,12 +54,10 @@ do
                 Console.WriteLine("SABORES: " + pizza.Sabor);
                 Console.WriteLine("PREÇO: " + string.Format("R${0:F2}", pizza.Preco) + '\n');
             }
-            break;
         }
         else
         {
             Console.WriteLine("Nenhuma Pizza foi cadastrada.");
-            break;
         }
     }
 
@@ -71,45 +70,45 @@ do
         else
         {
             var pedido = new Pedido();
-            pedido.Id = numeroPedidos + 1;
-            var pedidoPronto = pedido.criarPedido(pizzaList);
+            var pedidoPronto = pedido.criarPedido(pizzaList, numeroPedidos);
             pedidosList.Add(pedidoPronto);
+            numeroPedidos = numeroPedidos + 1;
         }
     }
 
-    else if (menuSet == 4) 
+    else if (menuSet == 4)
     {
         if (pedidosList.Count < 1)
         {
-            Console.WriteLine("❌ Nenhum pedido foi encontrado."); 
-            break;
+            Console.WriteLine("❌ Nenhum pedido foi encontrado.");
         }
-        else 
+        else
         {
             Console.WriteLine("\n ========== Listar Pedidos! ==========");
             foreach (Pedido pedido in pedidosList)
             {
-<<<<<<< HEAD
                 Console.WriteLine($"PEDIDO {pedido.Id}");
-                Console.WriteLine($"Cliente: {pedido.NomeCliente} - {pedido.TelefoneCliente}");
-                Console.WriteLine("Pizzas do pedido:");
-=======
                 Console.WriteLine($"🙋 Cliente: {pedido.NomeCliente} - 📞 {pedido.TelefoneCliente}");
                 Console.WriteLine("========== 📦 Pizzas do pedido ==========");
->>>>>>> 473e189f6554073e683e548e68b71d79d12443b4
                 foreach (Pizza pizza in pedido.pizzasPedido)
                 {
                     Console.WriteLine($"🍕 {pizza.Nome.ToUpper()} - R${pizza.Preco:F2}");
                 }
-<<<<<<< HEAD
                 Console.WriteLine($"Total: {pedido.ValorTotal:F2}");
                 Console.WriteLine($"Quanto falta para Pagar: R${pedido.Restante:F2}");
                 Console.WriteLine($"Pago: {pedido.StatusPago}");
-=======
                 Console.WriteLine("========================= VALOR TOTAL ==============================");
                 Console.WriteLine($"💵 R${pedido.ValorTotal:F2}\n====================================================================\n");
->>>>>>> 473e189f6554073e683e548e68b71d79d12443b4
             }
+        }
+    }
+    else if (menuSet == 5)
+    {
+        if(pedidosList.Count == 0) {
+            Console.WriteLine("Não há pedidos cadastrados");
+        } else {
+            var pagamento = new Pagamento();
+            pedidosList = pagamento.EfetuarPagamento(pedidosList);
         }
     }
 

@@ -4,21 +4,23 @@ namespace PizzariaProject.Models;
 
 public class Pedido
 {
-    public int Id {get; set;} // CRIAR LÓGICA
+    public int Id { get; set; } // CRIAR LÓGICA
     public string NomeCliente { get; set; }
     public string TelefoneCliente { get; set; }
     public List<Pizza> pizzas = new List<Pizza>();
     public List<Pizza> pizzasPedido = new List<Pizza>();
     public double ValorTotal { get; set; }
     public Boolean Pago { get; set; }
-    public string StatusPago {get; set;}
+    public string StatusPago { get; set; }
     public double Restante { get; set; }
+    public List<string> TiposPagos = new List<string>();
 
-    public Pedido criarPedido(List<Pizza> pizzas)
+    public Pedido criarPedido(List<Pizza> pizzas, int idPedido)
     {
         var pedido = new Pedido();
         var adicionarPizza = 1;
         pedido.pizzas = pizzas;
+        pedido.Id = idPedido;
         pedido.Pago = false;
         pedido.StatusPago = pedido.PagoTransform(pedido.Pago);
         Console.WriteLine("Quem é o cliente?");
@@ -28,7 +30,8 @@ public class Pedido
         Console.WriteLine("Escolha uma pizza para adicionar:");
         do
         {
-            for (int i = 0; i < pizzas.Count; i = i + 1) {
+            for (int i = 0; i < pizzas.Count; i = i + 1)
+            {
                 Console.WriteLine($"{pedido.pizzas[i].Nome.ToUpper()} - R${pedido.pizzas[i].Preco:F2}");
             }
             var pizzaEscolhida = Console.ReadLine();
@@ -42,17 +45,20 @@ public class Pedido
 
         Console.WriteLine("PEDIDO CRIADO");
         Console.WriteLine($"Total: R${pedido.ValorTotal:F2}");
-        foreach (var pizza in pizzas) {
-            Console.WriteLine($"{pizza.Nome} - {pizza.Preco}");
+        foreach (var pizza in pizzas)
+        {
+            Console.WriteLine($"{pizza.Nome} - R${pizza.Preco:F2}");
         }
         return pedido;
     }
 
-    private string PagoTransform(Boolean pago) {
+    public string PagoTransform(Boolean pago)
+    {
         if (pago)
         {
             return "SIM";
-        } else 
+        }
+        else
         {
             return "NÃO";
         }

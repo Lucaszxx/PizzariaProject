@@ -1,20 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c2SqVk1zXa2HqgVi/Rf+PvQgFsIgT51nsBNVj/+KuTvnoWRjJcmaK26o0QxtECHEsOyk08uf9O6b+3nZVWsVkA==",
+  "dgSpecHash": "1I48mute6Mgc4L6sx6AQXVVAl5ocbZ71OTpsxSmez1eR4V3MrYHsanFopYX86M5kWdoHKQ14w3cOlWskckchEw==",
   "success": true,
-<<<<<<< HEAD
-  "projectFilePath": "C:\\PizzariaProject\\PizzariaProject.csproj",
-  "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problema ao ler o arquivo de cache C:\\PizzariaProject\\obj\\project.nuget.cache: Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
-=======
-  "projectFilePath": "C:\\Projetos\\faculdade\\csharp\\PizzariaProject\\PizzariaProject.csproj",
+  "projectFilePath": "c:\\Projetos\\faculdade\\csharp\\PizzariaProject\\PizzariaProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.20\\microsoft.netcore.app.ref.6.0.20.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.20\\microsoft.windowsdesktop.app.ref.6.0.20.nupkg.sha512",
@@ -22,5 +10,4 @@
     "C:\\Users\\lucas\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.20\\microsoft.netcore.app.host.win-x64.6.0.20.nupkg.sha512"
   ],
   "logs": []
->>>>>>> 473e189f6554073e683e548e68b71d79d12443b4
 }

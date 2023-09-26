@@ -1,3 +1,13 @@
 {
-    "dotnet.defaultSolution": "PizzariaProject.sln"
+    "dotnet.defaultSolution": "PizzariaProject.sln",
+        "workbench.colorCustomizations": {
+          "titleBar.activeBackground": "#952bb2",
+          "titleBar.inactiveBackground": "#ffffff",
+          "activityBar.background": "#952bb2",
+          "activityBarBadge.background": "#b4b2b2",
+          "activityBar.inactiveForeground": "#f3fcff",
+          "commandCenter.border": "#c9c3c3",
+          "statusBarItem.remoteForeground": "#000000",
+          "titleBar.activeForeground": "#dedddd"
+        },
 }
